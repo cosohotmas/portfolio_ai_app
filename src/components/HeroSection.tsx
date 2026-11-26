@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowDownRight, ArrowUpRight, Moon, Sun, Terminal } from 'lucide-react';
 import { motion } from 'motion/react';
 import { DEVELOPER_PROFILE } from '../data/portfolioData';
@@ -13,9 +14,64 @@ export default function HeroSection({
   onToggleTheme,
   roleTitle = DEVELOPER_PROFILE.roleTitle,
 }: HeroSectionProps) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const updateMotionPreference = () => {
+      setPrefersReducedMotion(mediaQuery.matches);
+      if (videoRef.current) {
+        if (mediaQuery.matches) {
+          videoRef.current.pause();
+        } else {
+          videoRef.current.play().catch(() => {});
+        }
+      }
+    };
+
+    updateMotionPreference();
+    mediaQuery.addEventListener('change', updateMotionPreference);
+    return () => mediaQuery.removeEventListener('change', updateMotionPreference);
+  }, []);
+
   return (
-    <section id="top" className="border-b border-zinc-200 dark:border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-14 lg:pt-20 lg:pb-20">
+    <section
+      id="top"
+      className="relative overflow-hidden border-b border-zinc-200 dark:border-white/10 bg-[#09090B] light:bg-white"
+    >
+      {/* Hero Background Video & Readability Overlays */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-[#09090B]"
+      >
+        <video
+          ref={videoRef}
+          autoPlay={!prefersReducedMotion}
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className={`h-full w-full object-cover object-right transition-opacity duration-300 ${
+            theme === 'dark' ? 'opacity-55' : 'opacity-15'
+          }`}
+        >
+        
+          <source src="/hero-a-loop.mp4" type="video/mp4" />
+        </video>
+
+        {theme === 'dark' ? (
+          <>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#09090B] via-[#09090B]/75 to-[#09090B]/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-[#09090B]/45" />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
+        )}
+      </div>
+
+      {/* Main Hero Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-14 lg:pt-20 lg:pb-20">
         {/* Top Metadata & Theme Switch Row */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-zinc-200 dark:border-white/10">
           <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-zinc-600 dark:text-zinc-400">
@@ -134,7 +190,7 @@ export default function HeroSection({
       </div>
 
       {/* Editorial Section Divider Ribbon */}
-      <div className="border-t border-zinc-200 dark:border-white/10 bg-zinc-100/70 dark:bg-white/[0.02] overflow-hidden py-3">
+      <div className="relative z-10 border-t border-zinc-200 dark:border-white/10 bg-zinc-100/70 dark:bg-white/[0.02] overflow-hidden py-3">
         <div className="animate-marquee text-xs font-medium tracking-wide text-zinc-500 dark:text-zinc-400 whitespace-nowrap">
           {Array.from({ length: 4 }).map((_, idx) => (
             <span key={idx} className="inline-flex items-center gap-6 px-6">
