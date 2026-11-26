@@ -1,0 +1,6 @@
+{
+  "name": "ㅊBackHo | 차백호 AI 엔지니어 포트폴리오",
+  "description": "안녕하세요. 차백호입니다. 프론트엔드, 백엔드, 배포까지 서비스 전체 흐름을 책임지고 Python, LLM, RAG, LangGraph 기반 AI 솔루션을 구현하는 AI 엔지니어 포트폴리오입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

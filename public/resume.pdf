@@ -1,0 +1,96 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1590 >>
+stream
+BT
+/F1 18 Tf
+50 760 Td
+(Cha BackHo (Chabaekho) - AI Full-Stack Engineer) Tj
+/F1 10 Tf
+0 -22 Td
+0 -15 Td
+(Email: cosohotmas@gmail.com | GitHub: https://github.com/cosohotmas) Tj
+0 -15 Td
+(Location: Busan, South Korea) Tj
+0 -15 Td
+() Tj
+0 -18 Td
+/F2 11 Tf
+(PROFILE SUMMARY) Tj
+/F1 10 Tf
+0 -15 Td
+(End-to-end AI Full-Stack Engineer building Frontend, Backend, Deployment,) Tj
+0 -15 Td
+(and production AI systems powered by Python, LLM, RAG, and LangGraph.) Tj
+0 -15 Td
+() Tj
+0 -18 Td
+/F2 11 Tf
+(CORE TECHNICAL ARSENAL) Tj
+/F1 10 Tf
+0 -15 Td
+(- AI & LLM: Python, LLM, RAG, LangGraph, LangChain, PyTorch, Scikit-learn) Tj
+0 -15 Td
+(- Full-Stack: React, Next.js, TypeScript, FastAPI, REST API, SQL) Tj
+0 -15 Td
+(- Observability & Infra: Logging, Tracing, Eval, Vercel, Streamlit, Docker) Tj
+0 -15 Td
+() Tj
+0 -18 Td
+/F2 11 Tf
+(EDUCATION & EXPERIENCE) Tj
+/F1 10 Tf
+0 -15 Td
+(- EastCamp AI Engineer / AI Human 7th \(2026.06 - 2026.11\)) Tj
+0 -15 Td
+(- K-water Drone Facility Time-Series Management System \(2021.09 - 2022.09\)) Tj
+0 -15 Td
+(- E-Commerce UI & SEO Optimization - Category #1 Rank \(2010.01 - 2011.02\)) Tj
+0 -15 Td
+() Tj
+0 -18 Td
+/F2 11 Tf
+(SELECTED PROJECTS) Tj
+/F1 10 Tf
+0 -15 Td
+(- OpenNadeuli: Barrier-free travel itinerary planner \(opennadeuli.vercel.app\)) Tj
+0 -15 Td
+(- AI-Titude: AI proficiency assessment platform \(aititude.vercel.app\)) Tj
+0 -15 Td
+(- Deep Learning Portfolio: MNIST CNN & Seoul Bike Demand Predictor) Tj
+0 -15 Td
+(- CLIP Fashion Search: Multimodal text-image similarity search) Tj
+0 -15 Td
+(- Distil-Whisper: Fast distilled speech-to-text pipeline) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001893 00000 n 
+0000001963 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2038
+%%EOF
